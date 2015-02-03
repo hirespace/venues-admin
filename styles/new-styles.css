@@ -1,0 +1,23 @@
+.table {
+    font-size: 14px;
+}
+
+.admin-table {
+	table-layout: fixed;
+	width:auto;
+}
+.admin-table .section-name {
+	width: 40%;
+}
+.admin-table .date {
+	width: 10%;
+}
+.admin-table .name {
+	width: 31%;
+}
+.admin-table .status {
+	width: 8%;
+}
+.admin-table .perc {
+	width: 7%;
+}
