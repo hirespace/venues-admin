@@ -1,0 +1,106 @@
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span,
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+    border-radius: 0;
+    margin-left: 0;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    border-radius: 0;
+    width: 25px;
+    padding: 5px 2px;
+    text-align: center;
+    margin-left: 0;
+}
+
+.table {
+    font-size: 12px;
+}
+
+.table .modal {
+    font-size: 16px;
+}
+
+.admin-table .usages {
+    display:none;
+}
+
+@media (min-width: 360px) {
+    .pagination > li > a,
+    .pagination > li > span {
+        width: 27px;
+    }
+}
+
+@media (min-width: 640px) {
+    .pagination > li > a,
+    .pagination > li > span {
+        width: 28px;
+    }
+    .admin-table {
+        width: 100%;
+        table-layout: fixed;
+    }
+    .admin-table th,
+    .admin-table td {
+        width: 40px;
+    }
+    .admin-table .name {
+        width: 100px;
+    }
+    .admin-table .status {
+        width: 88px;
+    }
+}
+
+@media (min-width: 768px) {
+    .pagination > li > a,
+    .pagination > li > span {
+        padding: 5px;
+        width: 34px;
+    }
+}
+
+@media (min-width: 992px) {
+    .pagination > li > a,
+    .pagination > li > span {
+        width: 32px;
+    }
+    .admin-table th,
+    .admin-table td {
+        width: 36px;
+    }
+    .admin-table .name {
+        width: 50px;
+    }
+    .admin-table .status {
+        width: 88px;
+    }
+    .admin-table .usages {
+        display: table-cell;
+        width: 88px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .admin-table .name {
+        width: 75px;
+    }
+    .admin-table .status,
+    .admin-table .usages {
+        width: 62px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .pagination > li > a,
+    .pagination > li > span {
+        width: 34px;
+    }
+    .admin-table .usages,
+    .admin-table .status {
+        width: 40px;
+    }
+}
