@@ -1,4 +1,4 @@
-.pagination-sm > li:first-child > a,
+/*.pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span,
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
@@ -13,7 +13,7 @@
     padding: 5px 2px;
     text-align: center;
     margin-left: 0;
-}
+}*/
 
 .table {
     font-size: 12px;
@@ -27,18 +27,18 @@
     display:none;
 }
 
-@media (min-width: 360px) {
+/*@media (min-width: 360px) {
     .pagination > li > a,
     .pagination > li > span {
         width: 27px;
     }
-}
+}*/
 
 @media (min-width: 640px) {
-    .pagination > li > a,
+/*    .pagination > li > a,
     .pagination > li > span {
         width: 28px;
-    }
+    }*/
     .admin-table {
         width: 100%;
         table-layout: fixed;
@@ -55,19 +55,19 @@
     }
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .pagination > li > a,
     .pagination > li > span {
         padding: 5px;
         width: 34px;
     }
-}
+}*/
 
 @media (min-width: 992px) {
-    .pagination > li > a,
+    /*.pagination > li > a,
     .pagination > li > span {
         width: 32px;
-    }
+    }*/
     .admin-table th,
     .admin-table td {
         width: 36px;
@@ -95,10 +95,10 @@
 }
 
 @media (min-width: 1500px) {
-    .pagination > li > a,
+    /*.pagination > li > a,
     .pagination > li > span {
         width: 34px;
-    }
+    }*/
     .admin-table .usages,
     .admin-table .status {
         width: 40px;

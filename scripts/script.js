@@ -1,10 +1,15 @@
-
-// Mobile device side nav magic
-$(document).on("click", ".side-nav li.active", function() {
-	$('.side-nav li:not(.active)').removeClass('hide-sm');
+$(document).on('click', '[data-role=add-new-user]', function (e) {
+    e.preventDefault();
+    $('[data-role=new-user-type]').show();
 });
 
-$(document).on("click", ".side-nav li:not(.active)", function() {
-	$(this).removeClass('hide-sm');
-	$('.side-nav li:not(.active)').addClass('hide-sm');
+$(document).on('click', '[data-role=existing-radio]', function (e) {
+    $('[data-role=new-user-inputs]').show();
+    if ($(this).attr('data-value') === "existing") {
+        $('[data-role=new-user-inputs] input').hide();
+        $('[data-role=email-input]').show();
+    }
+    else {
+        $('[data-role=new-user-inputs] input').show();
+    }
 });
