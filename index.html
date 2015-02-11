@@ -143,7 +143,7 @@
 <section class="dark-bg">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-lg-12 hidden-xs">
+            <div class="col-md-12 col-lg-12 col-xl-12 col-lg-12 hidden-xs">
                 <ul class="breadcrumb no-margin">
                     <li>Admin</li>
                 </ul>
@@ -155,7 +155,7 @@
 <section class="inline-header">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-lg-12 col-xl-12">
                 <div class="current-venue-header pretty-font">
                     <i class="glyphicon glyphicon-wrench"></i> Admin
                 </div>
@@ -184,60 +184,67 @@
                     <div class="tab-pane active" id="venues">
                         <div class="well">
                             <h2 class="upper section-title">Manage venues</h2>
-                            <div class="row bottom-sm-margin">
-                                <div class="col-md-6 bottom-tiny-margin">
-                                    <div class="bottom-sm-margin h3">Select by name...</div>
+
+                            <!-- Search -->
+                            <div class="row bottom-tiny-margin">
+                                <div class="col-xs-12 col-sm-4 col-md-6 bottom-tiny-margin">
                                     <div class="input-group">
                                         <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
                                         <input type="text" id="searchField" data-bind="value: searchWord" class="form-control"/>
-                                        <a class="input-group-addon btn btn-primary upper">Go</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-3 bottom-tiny-margin">
+                                    <div class="radio special-radio">
+                                        <label class="btn btn-default btn-purple btn-block upper">
+                                          <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+                                          Include Dormant
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-3 bottom-tiny-margin">
+                                    <div class="radio special-radio">
+                                        <label class="btn btn-default btn-purple btn-block upper">
+                                          <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+                                          Awaiting approval
+                                        </label>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12 bottom-sm-margin h3">or show defined selection...</div>
-                                <div class="col-xs-6 col-md-3 bottom-tiny-margin">
-                                    <a href="" class="btn btn-default btn-purple btn-block upper">Recent activity</a>
-                                </div>
-                                <div class="col-xs-6 col-md-3 bottom-tiny-margin">
-                                    <a href="" class="btn btn-default btn-purple btn-block upper">Awaiting approval</a>
-                                </div>
-                            </div>
-                            <div class="row dashed-bottom bottom-med-pad bottom-med-margin">
-                                <div class="col-xs-6 col-md-3 bottom-tiny-margin">
-                                    <a href="" class="btn btn-default btn-purple active btn-block upper">Need Pics <span class="glyphicon glyphicon-ok"></span></a>
-                                </div>
-                                <div class="col-xs-6 col-md-3 bottom-tiny-margin">
-                                    <a href="" class="btn btn-default btn-purple btn-block upper">Need desc</a>
-                                </div>
-                                <div class="col-xs-6 col-md-3 bottom-tiny-margin">
-                                    <a href="" class="btn btn-default btn-purple btn-block upper">Need features</a>
-                                </div>
-                                <div class="col-xs-6 col-md-3 bottom-tiny-margin">
-                                    <a href="" class="btn btn-default btn-purple btn-block upper">Need prices</a>
+                            <div class="row bottom-margin bottom-pad dashed-bottom">
+                                <div class="col-md-3">
+                                    <a class="btn btn-primary btn-block upper">Search</a>
                                 </div>
                             </div>
 
+                            <!-- Results -->
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 col-lg-12 col-xl-12">
                                     <ul class="list-unstyled bottom-med-margin admin-list">
+                                        
+                                        <!-- Headers -->
+
                                         <li class="clearfix headers">
-                                            <div class="section-name column text-center" colspan="3">Venue</div>
-                                            <div class="section-name column text-center" colspan="5">Space</div>
+                                            <div class="section-name-1 column text-center" colspan="3">Venue</div>
+                                            <div class="section-name-2 column text-center" colspan="2">Space</div>
+                                            <div class="section-name-3 column text-center" colspan="3">Usage</div>
                                         </li>
+
                                         <li class="clearfix headers">
                                             <div class="column name">Name</div>
                                             <div class="column status">Status</div>
                                             <div class="column perc text-center">%</div>
                                             <div class="column name">Name</div>
                                             <div class="column status">Status</div>
+                                            <div class="column usage-type text-center"><abbr title="Type">T</abbr></div>
                                             <div class="column perc text-center">%</div>
-                                            <div class="column live text-center">Live</div>
+                                            <div class="column live text-center"><abbr title="Live?">L</abbr></div>
                                             <div class="column date">Edited</div>
                                             <div class="column actions">Actions</div>
                                         </li>
 
+                                        <!-- Content -->
+
                                         <li class="clearfix">
                                             <div class="column name">
                                                 <a href="">Perry Hall</a>
@@ -256,10 +263,11 @@
                                                         <li>
                                                             <a href="">Un-Publish</a>
                                                         </li>
+                                                        <li><a href="">Dormant</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center perc">80</div>
                                             <div class="column name"><a href="">Perry's Kitchen</a></div>
                                             <div class="column status">
                                                 <div class="publishButton" data-bind="visible: SpaceName()">
@@ -276,14 +284,16 @@
                                                             <li>
                                                                 <a href="">Publish</a>
                                                             </li>
+                                                            <li><a href="">Dormant</a></li>
 
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center usage-type"><a href="">B</a></div>
+                                            <div class="column text-center perc"><span class="danger">80</span></div>
                                             <div class="column text-center live"><span class="glyphicon glyphicon-remove"></span></div>
-                                            <div class="column date">27/10/2015</div>
+                                            <div class="column date">27/10/15</div>
                                             <div class="column actions text-center">
                                                 <a href="#" style="margin-right: 10px;" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-user"></span></a>
                                                     <a href=""><span class="glyphicon glyphicon-stats"></span></a>
@@ -300,7 +310,7 @@
                                                         <div class="modal-body">
                                                             <form class="form-horizontal">
                                                                 <div class="row">
-                                                                    <div class="col-md-12" style="padding-bottom:10px;">
+                                                                    <div class="col-md-12 col-lg-12 col-xl-12" style="padding-bottom:10px;">
                                                                         <div style="border-bottom: 1px solid rgb(229, 229, 229);">
                                                                             <div class="row top-tiny-margin bottom-tiny-margin">
                                                                                 <div class="col-xs-3 col-sm-2 col-md-1 text-center">
@@ -403,6 +413,7 @@
                                                 </div>
                                             </div>
                                         </li>
+
                                         <li class="clearfix">
                                             <div class="column name">
                                                 <a href="">Perry Hall</a>
@@ -421,10 +432,11 @@
                                                         <li>
                                                             <a href="">Un-Publish</a>
                                                         </li>
+                                                        <li><a href="">Dormant</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center perc">80</div>
                                             <div class="column name"><a href="">Perry's Lounge</a></div>
                                             <div class="column status">
                                                 <div class="publishButton" data-bind="visible: SpaceName()">
@@ -441,6 +453,7 @@
                                                             <li>
                                                                 <a href="">Publish</a>
                                                             </li>
+                                                            <li><a href="">Dormant</a></li>
                                                             <li>
                                                                 <a href="">Un-publish</a>
                                                             </li>
@@ -448,9 +461,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">60%</div>
+                                            <div class="column text-center usage-type"><a href="">W</a></div>
+                                            <div class="column text-center perc"><span class="success">100</span></div>
                                             <div class="column text-center live"><span class="glyphicon glyphicon-ok"></span></div>
-                                            <div class="column date">27/10/2015</div>
+                                            <div class="column date">27/10/15</div>
                                             <div class="column actions text-center">
                                                 <a href="#" style="margin-right: 10px;" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-user"></span></a>
                                                     <a href=""><span class="glyphicon glyphicon-stats"></span></a>
@@ -467,7 +481,7 @@
                                                         <div class="modal-body">
                                                             <form class="form-horizontal">
                                                                 <div class="row">
-                                                                    <div class="col-md-12" style="padding-bottom:10px;">
+                                                                    <div class="col-md-12 col-lg-12 col-xl-12" style="padding-bottom:10px;">
                                                                         <div style="border-bottom: 1px solid rgb(229, 229, 229);">
                                                                             <div class="row top-tiny-margin bottom-tiny-margin">
                                                                                 <div class="col-xs-3 col-sm-2 col-md-1 text-center">
@@ -570,6 +584,7 @@
                                                 </div>
                                             </div>
                                         </li>
+
                                         <li class="clearfix">
                                             <div class="column name">
                                                 <a href="">Perry Hall</a>
@@ -588,10 +603,11 @@
                                                         <li>
                                                             <a href="">Un-Publish</a>
                                                         </li>
+                                                        <li><a href="">Dormant</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center perc">80</div>
                                             <div class="column name"><a href="">Perry's Kitchen</a></div>
                                             <div class="column status">
                                                 <div class="publishButton" data-bind="visible: SpaceName()">
@@ -608,14 +624,16 @@
                                                             <li>
                                                                 <a href="">Publish</a>
                                                             </li>
+                                                            <li><a href="">Dormant</a></li>
 
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center usage-type"><a href="">D</a></div>
+                                            <div class="column text-center perc"><span class="danger">80</span></div>
                                             <div class="column text-center live"><span class="glyphicon glyphicon-remove"></span></div>
-                                            <div class="column date">27/10/2015</div>
+                                            <div class="column date">27/10/15</div>
                                             <div class="column actions text-center">
                                                 <a href="#" style="margin-right: 10px;" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-user"></span></a>
                                                     <a href=""><span class="glyphicon glyphicon-stats"></span></a>
@@ -632,7 +650,7 @@
                                                         <div class="modal-body">
                                                             <form class="form-horizontal">
                                                                 <div class="row">
-                                                                    <div class="col-md-12" style="padding-bottom:10px;">
+                                                                    <div class="col-md-12 col-lg-12 col-xl-12" style="padding-bottom:10px;">
                                                                         <div style="border-bottom: 1px solid rgb(229, 229, 229);">
                                                                             <div class="row top-tiny-margin bottom-tiny-margin">
                                                                                 <div class="col-xs-3 col-sm-2 col-md-1 text-center">
@@ -735,6 +753,7 @@
                                                 </div>
                                             </div>
                                         </li>
+
                                         <li class="clearfix">
                                             <div class="column name">
                                                 <a href="">Perry Hall</a>
@@ -753,10 +772,11 @@
                                                         <li>
                                                             <a href="">Un-Publish</a>
                                                         </li>
+                                                        <li><a href="">Dormant</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center perc">80</div>
                                             <div class="column name"><a href="">Perry's Lounge</a></div>
                                             <div class="column status">
                                                 <div class="publishButton" data-bind="visible: SpaceName()">
@@ -773,6 +793,7 @@
                                                             <li>
                                                                 <a href="">Publish</a>
                                                             </li>
+                                                            <li><a href="">Dormant</a></li>
                                                             <li>
                                                                 <a href="">Un-publish</a>
                                                             </li>
@@ -780,9 +801,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">60%</div>
+                                            <div class="column text-center usage-type"><a href="">B</a></div>
+                                            <div class="column text-center perc"><span class="success">100</span></div>
                                             <div class="column text-center live"><span class="glyphicon glyphicon-ok"></span></div>
-                                            <div class="column date">27/10/2015</div>
+                                            <div class="column date">27/10/15</div>
                                             <div class="column actions text-center">
                                                 <a href="#" style="margin-right: 10px;" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-user"></span></a>
                                                     <a href=""><span class="glyphicon glyphicon-stats"></span></a>
@@ -799,7 +821,7 @@
                                                         <div class="modal-body">
                                                             <form class="form-horizontal">
                                                                 <div class="row">
-                                                                    <div class="col-md-12" style="padding-bottom:10px;">
+                                                                    <div class="col-md-12 col-lg-12 col-xl-12" style="padding-bottom:10px;">
                                                                         <div style="border-bottom: 1px solid rgb(229, 229, 229);">
                                                                             <div class="row top-tiny-margin bottom-tiny-margin">
                                                                                 <div class="col-xs-3 col-sm-2 col-md-1 text-center">
@@ -902,6 +924,7 @@
                                                 </div>
                                             </div>
                                         </li>
+
                                         <li class="clearfix">
                                             <div class="column name">
                                                 <a href="">Perry Hall</a>
@@ -920,10 +943,11 @@
                                                         <li>
                                                             <a href="">Un-Publish</a>
                                                         </li>
+                                                        <li><a href="">Dormant</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center perc">80</div>
                                             <div class="column name"><a href="">Perry's Kitchen</a></div>
                                             <div class="column status">
                                                 <div class="publishButton" data-bind="visible: SpaceName()">
@@ -940,14 +964,16 @@
                                                             <li>
                                                                 <a href="">Publish</a>
                                                             </li>
+                                                            <li><a href="">Dormant</a></li>
 
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center usage-type"><a href="">D</a></div>
+                                            <div class="column text-center perc"><span class="danger">80</span></div>
                                             <div class="column text-center live"><span class="glyphicon glyphicon-remove"></span></div>
-                                            <div class="column date">27/10/2015</div>
+                                            <div class="column date">27/10/15</div>
                                             <div class="column actions text-center">
                                                 <a href="#" style="margin-right: 10px;" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-user"></span></a>
                                                     <a href=""><span class="glyphicon glyphicon-stats"></span></a>
@@ -964,7 +990,7 @@
                                                         <div class="modal-body">
                                                             <form class="form-horizontal">
                                                                 <div class="row">
-                                                                    <div class="col-md-12" style="padding-bottom:10px;">
+                                                                    <div class="col-md-12 col-lg-12 col-xl-12" style="padding-bottom:10px;">
                                                                         <div style="border-bottom: 1px solid rgb(229, 229, 229);">
                                                                             <div class="row top-tiny-margin bottom-tiny-margin">
                                                                                 <div class="col-xs-3 col-sm-2 col-md-1 text-center">
@@ -1067,6 +1093,7 @@
                                                 </div>
                                             </div>
                                         </li>
+
                                         <li class="clearfix">
                                             <div class="column name">
                                                 <a href="">Perry Hall</a>
@@ -1085,16 +1112,17 @@
                                                         <li>
                                                             <a href="">Un-Publish</a>
                                                         </li>
+                                                        <li><a href="">Dormant</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">80%</div>
+                                            <div class="column text-center perc">80</div>
                                             <div class="column name"><a href="">Perry's Lounge</a></div>
                                             <div class="column status">
                                                 <div class="publishButton" data-bind="visible: SpaceName()">
                                                     <div class="btn-group">
-                                                        <button class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-home"><span class="sr-only">Awaiting approval</span></span></button>
-                                                        <button class="btn btn-xs btn-warning dropdown-toggle" data-bind="css: spaceStatusStyle" data-toggle="dropdown" type="button">
+                                                        <button class="btn btn-xs btn-default"><span class="glyphicon glyphicon-home"><span class="sr-only">Awaiting approval</span></span></button>
+                                                        <button class="btn btn-xs btn-default dropdown-toggle" data-bind="css: spaceStatusStyle" data-toggle="dropdown" type="button">
                                                             <span class="caret"></span>
                                                             <span class="sr-only">Toggle Dropdown</span>
                                                         </button>
@@ -1112,9 +1140,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="column text-center perc">60%</div>
+                                            <div class="column text-center usage-type"><a href="">B</a></div>
+                                            <div class="column text-center perc"><span class="success">100</span></div>
                                             <div class="column text-center live"><span class="glyphicon glyphicon-ok"></span></div>
-                                            <div class="column date">27/10/2015</div>
+                                            <div class="column date">27/10/15</div>
                                             <div class="column actions text-center">
                                                 <a href="#" style="margin-right: 10px;" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-user"></span></a>
                                                     <a href=""><span class="glyphicon glyphicon-stats"></span></a>
@@ -1131,7 +1160,7 @@
                                                         <div class="modal-body">
                                                             <form class="form-horizontal">
                                                                 <div class="row">
-                                                                    <div class="col-md-12" style="padding-bottom:10px;">
+                                                                    <div class="col-md-12 col-lg-12 col-xl-12" style="padding-bottom:10px;">
                                                                         <div style="border-bottom: 1px solid rgb(229, 229, 229);">
                                                                             <div class="row top-tiny-margin bottom-tiny-margin">
                                                                                 <div class="col-xs-3 col-sm-2 col-md-1 text-center">
@@ -1234,12 +1263,14 @@
                                                 </div>
                                             </div>
                                         </li>
+
                                     </ul>
                                 </div>
                             </div>
 
+                            <!-- Pagination -->
                             <div class="row top-med-margin">
-                                <div class="col-md-12">
+                                <div class="col-md-12 col-lg-12 col-xl-12">
                                     <nav>
                                       <ul class="pagination clearfix">
                                         <li><a href="#">1</a></li>
@@ -1267,14 +1298,14 @@
                                         <input type="text" id="searchField" data-bind="value: searchWord" class="form-control"/>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12 col-lg-12 col-xl-12">
                                     <ul class="pagination pagination-sm" data-bind="foreach: pages()">
                                         <li data-bind="css: ($index() == $parent.currentPage() ? 'active' : '')">
                                             <a href="#" data-bind="event: {click: function(){ $parent.currentPage($index())}}, text: $index()"></a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12 col-lg-12 col-xl-12">
                                     <table class="table table-striped">
                                         <thead>
                                             <tr>
@@ -1366,7 +1397,7 @@
             <div class="container mobile-pad">
                 <div class="row">
                     <div class="col-xs-12 col-sm-4 col-md-4">
-                        <small class="copyright">&copy; 2015 Hire Space Website Ltd. All Rights Reserved.</small>
+                        <small class="copyright">&copy; 15 Hire Space Website Ltd. All Rights Reserved.</small>
                     </div>
                     <div class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
                         <ul class="list-unstyled clearfix connect">

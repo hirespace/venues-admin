@@ -66,30 +66,77 @@
 	border-right: 1px solid #dddddd;
 	border-top: 1px solid #dddddd;
 }
-.admin-list .section-name {
-	width: 37%;
+.admin-list .section-name-1 {
+	width: 36%;
+	border-top: none;
+}
+.admin-list .section-name-2 {
+	width: 30%;
+	border-top: none;
+}
+.admin-list .section-name-3 {
+	width: 16%;
 	border-top: none;
 }
 .admin-list .date {
-	width: 12%; /**/
+	width: 9%;
 }
 .admin-list .name {
 	width: 22%;
 }
 .admin-list .status {
-	width: 8%; /**/
+	width: 8%;
 }
 .admin-list .perc {
-	width: 7%; /**/
+	width: 6%;
+}
+.admin-list .usage-type {
+	width: 5%;
 }
 .admin-list .live {
-	width: 6%; /**/
+	width: 5%;
 }
 .admin-list .actions {
-	width: 8%; /**/
+	width: 8%;
 	border-right: none;
 }
 
 .modal-dialog {
 	width:760px;
+}
+
+.usage-type a {
+	color: #808080;
+	text-decoration: underline;
+}
+.usage-type a:hover,
+.usage-type a:active,
+.usage-type a:focus
+ {
+	color: #808080;
+}
+
+.live .glyphicon-ok,
+.perc .success {
+	color: #4e833c;
+}
+.headers .perc {
+	color: #808080;
+}
+.live .glyphicon-remove,
+.perc .danger {
+	color: #f24b4b;
+}
+
+.special-radio {
+	margin: 0;
+	padding: 0;
+}
+.special-radio input[type="radio"] {
+	margin:0 5px 0 0;
+	float:none;
+}
+.special-radio label {
+	padding: 7px 10px 4px;
+	display: block;
 }
