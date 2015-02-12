@@ -140,3 +140,7 @@
 	padding: 7px 10px 4px;
 	display: block;
 }
+
+.glyphicon-ok.complete {
+    color: #4e833c;
+}

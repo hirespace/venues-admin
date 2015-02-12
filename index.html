@@ -171,7 +171,7 @@
                 <div class="navbar navbar-default side-nav bottom-sm-margin" role="navigation">
                     <ul class="list-unstyled no-margin" role="tablist">
                         <li class="active">
-                            <a role="tab" data-toggle="tab" class="tab" href="#venues">Manage Venues <span class="pull-right glyphicon glyphicon-chevron-right"></span></a>
+                            <a role="tab" data-toggle="tab" class="tab" href="#venues">Manage Usages <span class="pull-right glyphicon glyphicon-chevron-right"></span></a>
                         </li>
                         <li>
                             <a role="tab" data-toggle="tab" class="tab" href="#users">Manage Users <span class="pull-right glyphicon glyphicon-chevron-right"></span></span></a>
@@ -183,7 +183,7 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="venues">
                         <div class="well">
-                            <h2 class="upper section-title">Manage venues</h2>
+                            <h2 class="upper section-title">Manage usages</h2>
 
                             <!-- Search -->
                             <div class="row bottom-tiny-margin">
@@ -296,10 +296,10 @@
                                             <div class="column date">27/10/15</div>
                                             <div class="column actions text-center">
                                                 <a href="#" style="margin-right: 10px;" data-toggle="modal" data-target="#modal2"><span class="glyphicon glyphicon-user"></span></a>
-                                                    <a href=""><span class="glyphicon glyphicon-stats"></span></a>
+                                                <a href="#" data-toggle="modal" data-target="#modalprogress1"><span class="glyphicon glyphicon-stats"></span></a>
                                             </div>
 
-                                            <!-- Modal -->
+                                            <!-- Modal - Users -->
                                             <div class="modal fade" id="modal2">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
@@ -412,6 +412,70 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- Modal - Progress -->
+                                            <div class="modal fade" id="modalprogress1">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title"><span class="glyphicon glyphicon-stats"></span> Profile Statistics</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row bottom-sm-margin">
+                                                                <div class="col-md-3">
+                                                                <br/><a href="">Perry Hall</a>
+                                                                </div>
+                                                                <div class="col-md-2 text-center">
+                                                                    Overview<br/>
+                                                                    <span class="glyphicon glyphicon-ok complete"></span>
+                                                                </div>
+                                                                <div class="col-md-2 text-center">
+                                                                    Details
+                                                                    <br/>
+                                                                    <span class="glyphicon glyphicon-ok complete"></span>
+                                                                </div>
+                                                                <div class="col-md-2 text-center">
+                                                                    Map
+                                                                    <br/>
+                                                                    <span class="glyphicon glyphicon-ok complete"></span>
+                                                                </div>
+                                                                <div class="col-md-2 text-center">
+                                                                    Rules
+                                                                    <br/>
+                                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                <br/><a href="">Business Usage</a>
+                                                                </div>
+                                                                <div class="col-md-2 text-center">
+                                                                    Desc<br/>
+                                                                    <span class="glyphicon glyphicon-ok complete"></span>
+                                                                </div>
+                                                                <div class="col-md-2 text-center">
+                                                                    Details
+                                                                    <br/>
+                                                                    <span class="glyphicon glyphicon-ok complete"></span>
+                                                                </div>
+                                                                <div class="col-md-2 text-center">
+                                                                    Prices
+                                                                    <br/>
+                                                                    <span class="glyphicon glyphicon-ok complete"></span>
+                                                                </div>
+                                                                <div class="col-md-2 text-center">
+                                                                    Photos
+                                                                    <br/>
+                                                                    <span class="glyphicon glyphicon-ok"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </li>
 
                                         <li class="clearfix">
