@@ -128,15 +128,15 @@
 	color: #f24b4b;
 }
 
-.special-radio {
+.special-checkbox {
 	margin: 0;
 	padding: 0;
 }
-.special-radio input[type="radio"] {
+.special-checkbox input[type="checkbox"] {
 	margin:0 5px 0 0;
 	float:none;
 }
-.special-radio label {
+.special-checkbox label {
 	padding: 7px 10px 4px;
 	display: block;
 }
